@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">LoginPages</string>
+
+    <string-array name="food_array">
+        <item>Runner bean recipes</item>
+        <item>Cucumber recipes</item>
+        <item>Healthy slow cooker recipes</item>
+        <item>Blackberry tiramisu with chocolate sauce</item>
+        <item>Slow cooker chicken recipes</item>
+        <item>Beetroot recipes</item>
+        <item>Healthy slow cooker recipes</item>
+        <item>Slow cooker curry recipes</item>
+        <item>Runner bean recipes</item>
+        <item>Cucumber recipes</item>
+        <item>Healthy slow cooker recipes</item>
+        <item>Blackberry tiramisu with chocolate sauce</item>
+        <item>Slow cooker chicken recipes</item>
+        <item>Beetroot recipes</item>
+        <item>Healthy slow cooker recipes</item>
+        <item>Slow cooker curry recipes</item>
+    </string-array>
+
+</resources>
