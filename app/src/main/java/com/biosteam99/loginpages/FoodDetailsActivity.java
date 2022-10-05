@@ -1,8 +1,6 @@
 package com.biosteam99.loginpages;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,52 +11,60 @@ import com.daimajia.androidanimations.library.YoYo;
 
 public class FoodDetailsActivity extends AppCompatActivity {
 
-    String name,desc,image,restaurantName,restaurantLocation;
-    double price;
+    TextView txtName,txtDesc,txtPrice,txtRName,txtRLocation;
+    ImageView imgFood,imgProfile;
 
-    ImageView imageViewFood;
-    TextView txtName,txtPrice,txtDesc,txtRName,txtLocation;
-
+    String name,desc,image,rName,rLocation;
+    Double price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_details);
 
-        imageViewFood=findViewById(R.id.imageFood);
         txtName=findViewById(R.id.txtName);
-        txtPrice=findViewById(R.id.txtPrice);
         txtDesc=findViewById(R.id.txtDesc);
+        txtPrice=findViewById(R.id.txtPrice);
+        imgFood=findViewById(R.id.imgFood);
         txtRName=findViewById(R.id.txtRName);
-        txtLocation=findViewById(R.id.txtLocation);
+        txtRLocation=findViewById(R.id.txtRLocation);
+        imgProfile=findViewById(R.id.img);
 
 
 
-        Bundle intent=getIntent().getExtras();
+        Bundle bundle= getIntent().getExtras();
 
-        name=intent.getString("NAME");
-        desc=intent.getString("DESC");
-        image=intent.getString("IMAGE");
-        restaurantName=intent.getString("RNAME");
-        restaurantLocation=intent.getString("RLOCATION");
+       name=bundle.getString("NAME");
+       desc=bundle.getString("DESC");
+       image=bundle.getString("IMAGE");
+        rLocation=bundle.getString("RLOCATION");
+        rName=bundle.getString("RNAME");
+        price=bundle.getDouble("PRICE");
 
-        price=intent.getDouble("PRICE");
-
-
-        Glide.with(FoodDetailsActivity.this).load(image).into(imageViewFood);
         txtName.setText(name);
+        txtPrice.setText(String.valueOf(price));
         txtDesc.setText(desc);
-        txtPrice.setText(price+" $");
+        txtRName.setText(rName);
+        txtRLocation.setText(rLocation);
 
-        YoYo.with(Techniques.FadeIn)
+        Glide.with(FoodDetailsActivity.this)
+                .load(image)
+                .into(imgFood);
+
+
+        Glide.with(FoodDetailsActivity.this)
+                .load(image)
+                .into(imgProfile);
+
+        YoYo.with(Techniques.BounceIn)
                 .duration(1000)
                 .repeat(1)
                 .playOn(txtName);
 
-        txtLocation.setText(restaurantLocation);
-        txtRName.setText(restaurantName);
+        YoYo.with(Techniques.FadeIn)
+                .duration(3000)
+                .repeat(1)
+                .playOn(imgProfile);
 
-
-        System.out.println(name + " - " + desc + " - " + restaurantName + " - " + restaurantLocation + " - " + price);
     }
 }

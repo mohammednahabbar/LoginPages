@@ -4,21 +4,18 @@ public class FoodModel {
 
     private String name;
     private String desc;
-    private double price;
     private String image;
-    private String restaurantName;
-    private String restaurantLocation;
+    private String rNAme;
+    private String rLocation;
+    private double price;
 
-    public FoodModel() {
-    }
-
-    public FoodModel(String name, String desc, double price, String image, String restaurantName, String restaurantLocation) {
+    public FoodModel(String name, String desc, double price, String image, String rNAme, String rLocation) {
         this.name = name;
         this.desc = desc;
-        this.price = price;
         this.image = image;
-        this.restaurantName = restaurantName;
-        this.restaurantLocation = restaurantLocation;
+        this.rNAme = rNAme;
+        this.rLocation = rLocation;
+        this.price = price;
     }
 
     public String getName() {
@@ -37,14 +34,6 @@ public class FoodModel {
         this.desc = desc;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public String getImage() {
         return image;
     }
@@ -53,19 +42,27 @@ public class FoodModel {
         this.image = image;
     }
 
-    public String getRestaurantName() {
-        return restaurantName;
+    public String getrNAme() {
+        return rNAme;
     }
 
-    public void setRestaurantName(String restaurantName) {
-        this.restaurantName = restaurantName;
+    public void setrNAme(String rNAme) {
+        this.rNAme = rNAme;
     }
 
-    public String getRestaurantLocation() {
-        return restaurantLocation;
+    public String getrLocation() {
+        return rLocation;
     }
 
-    public void setRestaurantLocation(String restaurantLocation) {
-        this.restaurantLocation = restaurantLocation;
+    public void setrLocation(String rLocation) {
+        this.rLocation = rLocation;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
