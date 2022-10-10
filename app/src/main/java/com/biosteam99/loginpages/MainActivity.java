@@ -11,14 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity{
 
-    SharedPreferences sp;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        sp=getSharedPreferences("SHAREDPREFERENCELOGIN2023",MODE_PRIVATE);
 
 
 
@@ -37,9 +34,6 @@ public class MainActivity extends AppCompatActivity{
 
     public void onClickLogin(View view){
         Intent intent;
-        SharedPreferences.Editor edit=sp.edit();
-        edit.putBoolean("ISLOGIN",true);
-        edit.commit();
         intent=new Intent(MainActivity.this,HomeActivity.class);
         intent.putExtra("USERNAME","ANDROID DEVELOPERS");
         intent.putExtra("PASSWORD",123456);

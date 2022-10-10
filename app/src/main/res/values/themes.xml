@@ -13,8 +13,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
         <!-- Customize your theme here. -->
-
         <item name="fontFamily">@font/somar_bold</item>
+
     </style>
 
     <style name="LoginEditTextTheme">
