@@ -43,4 +43,5 @@ dependencies {
 
     // Animation
     implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    implementation 'com.airbnb.android:lottie:5.2.0'
 }

@@ -9,8 +9,12 @@ public class FoodModel {
     private String rLocation;
     private double price;
 
+    public FoodModel(){
+
+    }
+
     public FoodModel(String name, String desc, double price, String image, String rNAme, String rLocation) {
-        this.name = name;
+        this.name= name;
         this.desc = desc;
         this.image = image;
         this.rNAme = rNAme;
