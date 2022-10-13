@@ -27,8 +27,8 @@ public class HomeActivity extends AppCompatActivity {
     ArrayList<FoodModel> foodModelArrayList;
 
    // ArrayList<String> foodNameArrayList;
-
     Boolean isUserLogin;
+
     Toolbar toolbar;
 
     @Override
@@ -36,13 +36,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        toolbar=findViewById(R.id.toolbarHome);
+
+        setSupportActionBar(toolbar);
 
 
         foodModelArrayList=new ArrayList<>();
       //  foodNameArrayList=new ArrayList<>();
-        toolbar=findViewById(R.id.toolbarHome);
 
-        setSupportActionBar(toolbar);
 
         foodModelArrayList.add(new FoodModel("مشاوي","Desc 1",20.2,"https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
                 "Restaurant Name 1","Restaurant Location 1"));
@@ -152,22 +153,21 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu,menu);
-
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId()==R.id.itemCart){
-            Toast.makeText(HomeActivity.this,"Click Cart Item" ,Toast.LENGTH_SHORT).show();
+        if (item.getItemId()==R.id.itemFavorite){
+            Toast.makeText(HomeActivity.this,"Favorite Menu Item",Toast.LENGTH_SHORT).show();
         }else if (item.getItemId()==R.id.itemPerson){
-            Toast.makeText(HomeActivity.this,"Click Person Item" ,Toast.LENGTH_SHORT).show();
+            Toast.makeText(HomeActivity.this,"Profile Menu Item",Toast.LENGTH_SHORT).show();
         }
 
         return true;
+
     }
 }

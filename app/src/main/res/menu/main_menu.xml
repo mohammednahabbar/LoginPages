@@ -2,16 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/itemCart"
-        android:title="Cart"
-        android:icon="@drawable/ic_baseline_shopping_cart_24"
-        app:showAsAction="always"
-        />
+    <item
+        android:id="@+id/itemFavorite"
+        android:title="Favorite"
+        app:iconTint="@color/purple_700"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        app:showAsAction="always"/>
 
-    <item android:id="@+id/itemPerson"
-        android:title="Person"
-        android:icon="@drawable/ic_baseline_person_24"
+    <item
+        android:id="@+id/itemPerson"
+        android:title="Profile"
         app:showAsAction="always"
-        />
+        app:iconTint="@color/purple_700"
+        android:icon="@drawable/ic_baseline_person_24"/>
+
+
 
 </menu>
