@@ -25,7 +25,7 @@
             android:layout_marginTop="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="24sp"
+            android:textSize="26sp"
             android:paddingRight="15dp"
             android:paddingLeft="15dp"
             android:layout_height="wrap_content"/>
@@ -37,21 +37,25 @@
             android:textColor="#444"
             android:paddingRight="15dp"
             android:paddingLeft="15dp"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/txtPrice"
-            android:layout_width="match_parent"
+            android:layout_width="70dp"
             android:text="Price"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_price"
             android:textStyle="bold"
             android:textSize="24sp"
+            android:gravity="center"
             android:layout_marginTop="20dp"
             android:paddingRight="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:paddingLeft="15dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="70dp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -83,7 +87,7 @@
                         android:text="Price"
                         android:textColor="@color/purple_700"
                         android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         android:paddingRight="15dp"
                         android:paddingLeft="15dp"
                         android:layout_height="wrap_content"/>
@@ -94,7 +98,7 @@
                         android:text="Price"
                         android:textColor="#444"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="22sp"
                         android:layout_marginTop="10dp"
                         android:paddingRight="15dp"
                         android:paddingLeft="15dp"
@@ -108,5 +112,23 @@
 
 
     </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnWebSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/purple_700"
+        android:drawableStart="@drawable/ic_baseline_public_24"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="زيارة موقع الويب"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
 
 </RelativeLayout>
